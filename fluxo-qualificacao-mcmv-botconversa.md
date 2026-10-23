@@ -407,6 +407,25 @@ Origem: Instagram – SIMULAR
 
 As perguntas sobre FGTS, entrada e região você faz na conversa, já com o lead qualificado.
 
+### Quando o fluxo passa o lead para o Eder
+
+| # | Gatilho | Prazo para o Eder responder |
+|---|---|---|
+| 1 | Lead classificado como 🔥 **quente** | Até 5 minutos |
+| 2 | Lead pede atendimento humano ("Eder", "atendente", "falar com você") | Até 15 minutos |
+| 3 | 2ª resposta fora do roteiro | Até 15 minutos |
+| 4 | Lead menciona "reprovado", "negaram" ou "golpe" | Até 15 minutos (lead desconfiado precisa de humano) |
+| 5 | Lead 🌤️ **morno** responde à retomada ("SIM", "quero") | Até 1 hora |
+| 6 | Lead 🏦 **fora do MCMV** aceita a simulação em outras linhas | Até 1 hora |
+| 7 | Lead ❄️ **frio** volta na reativação do dia 30 | Até 1 dia |
+
+**Não passam para o Eder:** frio (fica na nutrição) e morno que ainda não respondeu à retomada.
+
+**Fora do horário de atendimento** (definir, por exemplo, das 20h às 8h), o fluxo avisa:
+```
+{nome}, já anotei tudo aqui! 📝 O Eder te responde pessoalmente amanhã a partir das 8h. Se preferir, já me diz o melhor horário pra ele te chamar.
+```
+
 ### Respostas "fora do roteiro" (fase 1: fluxo + humano)
 
 Configure em **cada uma das 4 perguntas**: se a resposta não for uma opção válida, o fluxo segue esta ordem.
