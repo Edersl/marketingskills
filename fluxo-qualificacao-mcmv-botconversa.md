@@ -346,7 +346,70 @@ Isso acaba com o cadastro manual que aparece hoje nos seus contatos mais recente
 
 ---
 
-## 10. Checklist de implementação
+## 10. Versão express: 4 perguntas (direct do Instagram ou WhatsApp)
+
+Use quando o lead chegar pelo SIMULAR e você quiser filtrar rápido antes de assumir a conversa. Mande uma pergunta por vez.
+
+**Abertura**
+```
+Oi! Aqui é o Eder 😊 Pra montar sua simulação do jeito certo, me responde 4 perguntinhas rápidas, combinado?
+```
+
+**1. Renda**
+```
+Somando todo mundo que vai comprar junto, qual é a renda BRUTA da família?
+1️⃣ Até R$ 3.200
+2️⃣ R$ 3.200 a R$ 5.000
+3️⃣ R$ 5.000 a R$ 9.600
+4️⃣ R$ 9.600 a R$ 13.000
+5️⃣ Acima de R$ 13.000
+```
+
+**2. Comprovação**
+```
+E como você recebe?
+1️⃣ Carteira assinada ou servidor/aposentado
+2️⃣ Autônomo ou MEI
+3️⃣ Sem comprovação
+```
+
+**3. Nome**
+```
+Seu nome está limpo hoje (sem restrição no SPC/Serasa)? Fica só entre a gente 🤐
+1️⃣ Sim
+2️⃣ Tenho pendência
+3️⃣ Não sei
+```
+
+**4. Prazo**
+```
+Última! Quando você quer estar com a chave na mão?
+1️⃣ O quanto antes
+2️⃣ Nos próximos 3 meses
+3️⃣ Só pesquisando por enquanto
+```
+
+**Classificação**
+| Resultado | Regra | Ação |
+|---|---|---|
+| 🔥 Quente | Renda até R$ 13.000 + comprovação (1 ou 2) + nome limpo + prazo 1 ou 2 | Você assume na hora: "Você tem perfil! Vou montar sua simulação. Qual o melhor horário pra gente conversar?" |
+| 🌤️ Morno | Uma pendência: nome, renda sem comprovação ou prazo 3 | Plano de preparo + follow-up em 3 e 7 dias |
+| ❄️ Frio | Mais de uma pendência | Conteúdo educativo + reativação em 30 dias |
+| 🏦 Fora do MCMV | Renda acima de R$ 13.000 | Simulação em outras linhas de financiamento |
+
+**Resumo que chega para você (lead quente)**
+```
+🔥 {nome} | {telefone}
+Renda: {faixa} | {comprovação}
+Nome limpo: {sim/não} | Prazo: {prazo}
+Origem: Instagram – SIMULAR
+```
+
+As perguntas sobre FGTS, entrada e região você faz na conversa, já com o lead qualificado.
+
+---
+
+## 11. Checklist de implementação
 
 - [ ] Criar os campos personalizados (seção 2)
 - [ ] Criar as etiquetas (seção 2)
