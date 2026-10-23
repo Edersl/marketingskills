@@ -407,6 +407,51 @@ Origem: Instagram – SIMULAR
 
 As perguntas sobre FGTS, entrada e região você faz na conversa, já com o lead qualificado.
 
+### Respostas "fora do roteiro" (fase 1: fluxo + humano)
+
+Configure em **cada uma das 4 perguntas**: se a resposta não for uma opção válida, o fluxo segue esta ordem.
+
+**1ª resposta fora do roteiro (acolhe e repete a pergunta)**
+```
+Boa pergunta, {nome}! Vou te responder direitinho, prometo. 😊
+
+Só preciso dessa informação antes pra não te passar nada errado. É só responder com o número:
+{repete as opções da pergunta atual}
+```
+
+**2ª resposta fora do roteiro (transfere para o Eder)**
+```
+Entendi, {nome}! Sua dúvida merece uma resposta pessoal. Vou te passar pro Eder agora mesmo, ele já te responde por aqui. 🙏
+```
+→ marca `status:aguardando-eder` e `pendencia:fora-do-fluxo` → **aviso interno para o Eder:**
+```
+⚠️ LEAD COM DÚVIDA FORA DO FLUXO
+👤 {nome} | 📱 {telefone}
+📍 Origem: {origem}
+❓ Parou na pergunta: {pergunta_atual}
+💬 Última mensagem: "{ultima_mensagem}"
+✅ Já respondeu: {respostas_coletadas}
+```
+
+**Áudio em vez de texto**
+```
+Recebi seu áudio, {nome}! 🎧 Pra eu seguir com sua análise agora, me responde só com o número da opção, tá bom?
+{repete as opções}
+```
+(O Eder ouve o áudio depois, junto com o resumo.)
+
+**Palavras-chave com resposta própria** (verificar antes da 1ª resposta fora do roteiro)
+
+| O lead escreve algo com... | Resposta | Depois |
+|---|---|---|
+| "quanto fica", "parcela", "valor", "preço" | *"Ótima pergunta! A parcela depende da renda da família, e no Minha Casa Minha Vida ela não pode passar de 30% dela. Por isso eu não chuto número: com mais 2 ou 3 respostas eu já te dou uma noção real 😉"* | Repete a pergunta atual |
+| "nome sujo", "negativado", "spc", "serasa" | *"Fica tranquilo(a), isso não fecha a porta! Muita gente que atendo começou assim. Já já te explico o caminho 🙏"* | Repete a pergunta atual |
+| "não tenho como provar", "informal", "por fora", "autônomo" | *"Tem caminho sim! Renda informal pode ser comprovada com extratos ou abrindo um MEI. Já te explico melhor 💪"* | Repete a pergunta atual |
+| "é golpe", "é confiável", "verdade" | *"Pergunta justa! Sou o Eder Lopes, corretor de imóveis com CRECI MS-7971, e atendo em Campo Grande. Você pode conferir meu registro no site do CRECI-MS. A simulação é gratuita e eu não peço nenhum pagamento 🙏"* | Repete a pergunta atual |
+| "atendente", "humano", "falar com você", "eder" | *"Claro! Vou te passar pro Eder agora 🙏"* | Transfere na hora |
+
+---
+
 ### Sequência para o lead QUENTE
 
 **1. Resposta imediata (até 5 minutos depois da 4ª resposta)**
