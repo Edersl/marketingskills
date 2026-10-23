@@ -407,6 +407,73 @@ Origem: Instagram – SIMULAR
 
 As perguntas sobre FGTS, entrada e região você faz na conversa, já com o lead qualificado.
 
+### Respostas para o lead MORNO (uma pendência)
+
+**Nome com pendência**
+```
+{nome}, obrigado pela sinceridade! 🙏
+
+Nome com pendência não fecha a porta, só muda a ordem dos passos:
+1️⃣ Primeiro você consulta a dívida (app Serasa ou Registrato do Banco Central, grátis)
+2️⃣ Negocia: muitas vezes sai com desconto grande e resolve rápido
+3️⃣ Enquanto isso, eu já deixo sua simulação e documentação prontas
+
+Assim que o nome limpar, a gente dá entrada sem perder tempo. Quer que eu te mande a lista de documentos pra ir adiantando?
+```
+
+**Renda sem comprovação**
+```
+{nome}, dá pra resolver! 💪
+
+O banco precisa enxergar sua renda no papel. O caminho mais comum é:
+1️⃣ Abrir um MEI (é gratuito e sai no mesmo dia)
+2️⃣ Passar a receber pela conta do MEI e guardar os extratos
+3️⃣ Com alguns meses de movimentação, a gente já consegue simular de verdade
+
+Também dá pra somar a renda de quem vai morar com você, se essa pessoa tiver carteira assinada. Tem alguém assim na sua casa?
+```
+
+**Só pesquisando**
+```
+Perfeito, {nome}! Pesquisar antes é atitude de quem compra bem. 👏
+
+Pela sua renda, você já se encaixa no Minha Casa Minha Vida, e isso significa juros menores e possibilidade de subsídio na entrada.
+
+Faço uma proposta: te mando sua simulação agora, sem compromisso. Aí você pesquisa já sabendo quanto pode financiar e quanto fica a parcela. Pode ser?
+```
+
+**Retomada do morno**
+- **Dia 3:**
+```
+Oi {nome}! Passando pra saber se deu pra olhar aquele primeiro passo que te mandei. Ficou alguma dúvida? Tô aqui pra te ajudar 😊
+```
+- **Dia 7:**
+```
+{nome}, o aluguel em Campo Grande subiu mais de 16% este ano. Cada mês esperando é dinheiro que não volta.
+
+Se quiser, a gente monta junto o seu plano pra sair do aluguel ainda nos próximos meses. Me responde SIM que eu te chamo. 🏡
+```
+
+### Resposta para o lead FRIO (mais de uma pendência)
+
+```
+{nome}, obrigado pelas respostas! Pelo que vi, hoje ainda tem alguns pontos pra ajustar antes do financiamento. E tá tudo bem: quase todo cliente meu começou assim. 🙏
+
+O caminho é passo a passo:
+1️⃣ Regularizar o nome
+2️⃣ Conseguir comprovar a renda (MEI ou somando renda com alguém da casa)
+3️⃣ Aí sim, simulação e aprovação
+
+Vou te mandar de vez em quando conteúdos curtos que ajudam nesse caminho. Quando resolver o primeiro ponto, me chama aqui que a gente segue pro próximo. Combinado?
+```
+
+**Reativação do frio (dia 30)**
+```
+Oi {nome}! Aqui é o Eder 😊 Faz um mês que a gente conversou sobre sua casa própria.
+
+Conseguiu avançar em algum daqueles pontos (nome ou renda)? Se sim, já dá pra refazer sua análise. Me conta como está!
+```
+
 ---
 
 ## 11. Checklist de implementação
