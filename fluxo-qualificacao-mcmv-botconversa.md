@@ -407,6 +407,64 @@ Origem: Instagram – SIMULAR
 
 As perguntas sobre FGTS, entrada e região você faz na conversa, já com o lead qualificado.
 
+### Sequência para o lead QUENTE
+
+**1. Resposta imediata (até 5 minutos depois da 4ª resposta)**
+```
+{nome}, ótima notícia: pelo que você me respondeu, você TEM PERFIL pro Minha Casa Minha Vida! 🎉🏡
+
+Agora vem a parte que eu mais gosto: montar a SUA estratégia. Na simulação eu te mostro:
+✅ Quanto você consegue financiar
+✅ O valor da parcela
+✅ Quanto do subsídio e do FGTS podem entrar na entrada
+
+Leva uns 15 minutinhos. Qual horário fica melhor pra gente conversar?
+1️⃣ Hoje
+2️⃣ Amanhã de manhã
+3️⃣ Amanhã à tarde ou à noite
+```
+Depois desta mensagem, mande um **áudio curto (20 a 30 segundos)** se apresentando com a sua voz.
+
+**2. Confirmação do horário**
+```
+Fechado, {nome}! Ficou marcado pra {dia} às {hora}. 🗓️
+
+Pra simulação sair certinha, deixa à mão (pode ser foto mesmo):
+📄 RG e CPF (seu e de quem vai compor renda)
+💼 Último holerite ou, se for autônomo/MEI, extratos dos últimos 3 meses
+🏦 Saldo do FGTS (aparece no app FGTS)
+
+Se não tiver tudo agora, sem problema: a gente começa assim mesmo. 😉
+```
+
+**3. Lembrete (2 horas antes)**
+```
+Oi {nome}! Passando pra lembrar da nossa conversa hoje às {hora}. Tô te esperando pra montar sua simulação! 🏡
+```
+
+**4. Se não responder à mensagem 1**
+- **Depois de 2 horas:**
+```
+{nome}, sua análise ficou ótima e eu não queria deixar ela parada! 😊 Qual o melhor horário pra eu te ligar rapidinho?
+```
+- **No dia seguinte:**
+```
+Oi {nome}! Bom dia ☀️ Ontem vi que você tem perfil pro Minha Casa Minha Vida. Separei um horário hoje pra fazer sua simulação. Prefere de manhã ou à tarde?
+```
+- **Depois de 3 dias sem resposta:** passa para a retomada do morno (dias 3 e 7).
+
+**5. Depois da simulação**
+```
+{nome}, foi um prazer conversar com você! Como combinamos:
+💰 Valor financiável: R$ {valor}
+📅 Parcela estimada: R$ {parcela}
+🏦 Entrada estimada: R$ {entrada} (já considerando subsídio e FGTS)
+
+Os valores são estimados e dependem da análise de crédito da Caixa.
+
+Próximo passo: separei {n} opções de imóvel que cabem nesse número. Quer visitar no {dia sugerido}?
+```
+
 ### Respostas para o lead MORNO (uma pendência)
 
 **Nome com pendência**
