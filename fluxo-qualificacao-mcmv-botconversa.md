@@ -708,3 +708,36 @@ Enviar para o WhatsApp pessoal do Eder ou notificar o atendente no painel:
 ### Etapa 9: teste antes do disparo
 
 Com o seu número pessoal (ou o de alguém da família), percorra os 4 caminhos: quente (1-1-1-1), morno (1-3-1-1), frio (1-3-2-3) e SBPE (5). Confira se as etiquetas, os campos e o aviso interno chegaram.
+
+---
+
+## 13. Versão enxuta: página de pré-análise + 4 gatilhos no BotConversa
+
+Substitui a montagem das etapas 4 a 6 da seção 12. As 5 perguntas de múltipla escolha ficam numa página (renda familiar, comprovação, nome limpo, 3 anos de carteira, prazo). A página classifica o lead e abre o WhatsApp do Eder com a pré-análise pronta e um código no final.
+
+**Links por origem** (a origem vem do `#` no fim do link):
+`#mrv` · `#leila` · `#elquier` · `#lancamento` · `#instagram` · `#jetimob` · `#anuncio`
+
+**Classificação feita pela página**
+
+| Código | Regra |
+|---|---|
+| `[PRE-ANALISE Q]` quente | renda até R$ 13.000, renda comprovada (CLT, servidor, aposentado, autônomo ou MEI), nome limpo e prazo de até 3 meses |
+| `[PRE-ANALISE M]` morno | uma pendência entre comprovação, nome e prazo |
+| `[PRE-ANALISE F]` frio | duas ou mais pendências |
+| `[PRE-ANALISE S]` SBPE | renda acima de R$ 13.000 |
+
+**No BotConversa, só 4 gatilhos de palavra-chave** ("mensagem contém"):
+
+| Contém | Ações |
+|---|---|
+| `[PRE-ANALISE Q]` | etiqueta `lead:quente` + `status:aguardando-eder`, notificar atendente, responder: "Recebi sua pré-análise! Você tem perfil 🎉 Já já te chamo pra montar sua simulação." |
+| `[PRE-ANALISE M]` | etiqueta `lead:morno`, responder: "Recebi! Tem um ponto pra ajustar e eu te mostro como. Qual o melhor horário pra eu te chamar?" + lembrete em 3 dias |
+| `[PRE-ANALISE F]` | etiqueta `lead:frio` + `frio-30d`, responder: "Recebi! Vou montar um passo a passo pra você se preparar. Te chamo em breve." |
+| `[PRE-ANALISE S]` | etiqueta `rota:sbpe`, notificar atendente, responder: "Recebi! Pra sua renda existem outras linhas de financiamento. Te chamo pra simular." |
+
+**Mensagem do disparo de recuperação (leads Jetimob)**
+```
+Oi, {primeiro_nome}! Aqui é o Eder, corretor de imóveis 😊 Você se cadastrou há alguns dias pra conhecer um imóvel aqui em Campo Grande. Fiz uma pré-análise de 5 perguntas que leva menos de 1 minuto e já te mostra se você tem perfil pro Minha Casa Minha Vida 👇
+{link da página}#jetimob
+```
