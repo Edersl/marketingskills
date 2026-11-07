@@ -610,3 +610,101 @@ Conseguiu avançar em algum daqueles pontos (nome ou renda)? Se sim, já dá pra
 - [ ] **Testar com o seu próprio número** os 4 caminhos (quente, morno, frio e SBPE)
 - [ ] Trocar a mensagem pré-preenchida de cada anúncio de WhatsApp para rastrear a origem
 - [ ] Padronizar o CTA dos posts para **SIMULAR**
+
+---
+
+## 12. Montagem passo a passo: fluxo "MCMV Express" (leads da roleta Jetimob + SIMULAR)
+
+Um único fluxo atende os dois públicos: quem entra pelo disparo de recuperação dos leads do Jetimob e quem manda SIMULAR pelo Instagram. Os nomes dos blocos podem variar no painel do BotConversa; a lógica é a mesma.
+
+### Etapa 1: campos personalizados (Configurações → Campos)
+
+| Campo | Tipo | Valores |
+|---|---|---|
+| `primeiro_nome` | Texto | vem do CSV |
+| `campanha` | Texto | MRV / Condominio Leila / Elquier / Lancamento / Jetimob geral / Instagram |
+| `faixa_renda` | Texto | ate-3200 / 3200-5000 / 5000-9600 / 9600-13000 / acima-13000 |
+| `comprovacao` | Texto | clt-servidor / autonomo-mei / sem-comprovacao |
+| `nome_limpo` | Texto | sim / pendencia / nao-sei |
+| `prazo` | Texto | agora / 3-meses / pesquisando |
+| `pendencias` | Número | começa em 0 |
+| `temperatura` | Texto | quente / morno / frio / sbpe |
+
+### Etapa 2: etiquetas
+
+`jetimob-recuperacao` · `origem:jetimob` · `origem:instagram` · `lead:quente` · `lead:morno` · `lead:frio` · `rota:sbpe` · `status:aguardando-eder` · `frio-30d`
+
+### Etapa 3: gatilhos do fluxo
+
+| Gatilho | Onde o fluxo começa |
+|---|---|
+| Resposta **1** ao disparo de recuperação | Pergunta 1 (renda) |
+| Resposta **2** ao disparo de recuperação | Etiqueta `frio-30d` + mensagem de despedida |
+| Mensagem contém **SIMULAR** ou "vim do Instagram" | Abertura + etiqueta `origem:instagram` |
+| "Eder", "atendente", "falar com você" em qualquer etapa | Transferir para humano |
+
+### Etapa 4: mensagem do disparo (campanha em massa, etiqueta `jetimob-recuperacao`)
+
+```
+Oi, {primeiro_nome}! Aqui é o Eder, corretor de imóveis 😊 Você se cadastrou há alguns dias pra conhecer um imóvel aqui em Campo Grande e eu quero te dar a atenção certa. Ainda tá procurando?
+
+1️⃣ Sim, quero minha simulação grátis
+2️⃣ Agora não
+```
+
+Resposta 2:
+```
+Tudo bem, {primeiro_nome}! Quando quiser retomar, é só me chamar aqui. Vou te mandar umas dicas de vez em quando sobre como sair do aluguel 😉
+```
+
+Disparar por bloco (1, 2 e 3 em dias seguidos) para proteger o número.
+
+### Etapa 5: as 4 perguntas (blocos de pergunta com opções numeradas)
+
+Use os textos da seção 10. Em cada pergunta, salve a resposta no campo e some as pendências:
+
+| Pergunta | Opção | Salvar no campo | Pendências |
+|---|---|---|---|
+| 1. Renda | 1, 2, 3, 4 | `faixa_renda` | +0 |
+| 1. Renda | 5 | `faixa_renda` = acima-13000 | vai direto para a rota SBPE |
+| 2. Comprovação | 1 ou 2 | `comprovacao` | +0 |
+| 2. Comprovação | 3 | `comprovacao` = sem-comprovacao | +1 |
+| 3. Nome | 1 | `nome_limpo` = sim | +0 |
+| 3. Nome | 2 ou 3 | `nome_limpo` | +1 |
+| 4. Prazo | 1 ou 2 | `prazo` | +0 |
+| 4. Prazo | 3 | `prazo` = pesquisando | +1 |
+
+Resposta fora das opções: 1ª vez acolhe e repete a pergunta; 2ª vez transfere para o Eder (seção 10, "Respostas fora do roteiro").
+
+Se o BotConversa não somar números no campo, use uma etiqueta por pendência (`pendencia:comprovacao`, `pendencia:nome`, `pendencia:prazo`) e encadeie as condições da etapa 6 pelas etiquetas.
+
+### Etapa 6: condição de classificação (nesta ordem)
+
+1. `faixa_renda` = acima-13000 → `temperatura` = sbpe, etiqueta `rota:sbpe` → mensagem SBPE (seção 6)
+2. `pendencias` = 0 → `temperatura` = quente, etiquetas `lead:quente` + `status:aguardando-eder` → sequência do quente (seção 10) + **aviso interno**
+3. `pendencias` = 1 → `temperatura` = morno, etiqueta `lead:morno` → resposta do morno + retomada em 3 e 7 dias
+4. `pendencias` ≥ 2 → `temperatura` = frio, etiquetas `lead:frio` + `frio-30d` → resposta do frio + reativação em 30 dias
+
+### Etapa 7: aviso interno para o Eder (lead quente)
+
+Enviar para o WhatsApp pessoal do Eder ou notificar o atendente no painel:
+```
+🔥 LEAD QUENTE: responder em até 5 min
+👤 {primeiro_nome} | 📱 {telefone}
+🏷️ Campanha: {campanha}
+💰 Renda: {faixa_renda} | {comprovacao}
+✅ Nome limpo: {nome_limpo} | ⏰ Prazo: {prazo}
+```
+
+### Etapa 8: recuperação de quem parou no meio
+
+| Tempo sem resposta | Mensagem |
+|---|---|
+| 10 min | "Ficou alguma dúvida, {primeiro_nome}? É só responder com o número 😊" |
+| 24 h | "Passando pra não deixar sua simulação pela metade. Faltam poucas perguntas!" |
+| 3 dias | "Separei uma condição de entrada facilitada pra quem está no seu perfil. Quer que eu te mande?" |
+| 7 dias | Encerrar, etiqueta `status:sem-resposta`, marcar perdido no Jetimob |
+
+### Etapa 9: teste antes do disparo
+
+Com o seu número pessoal (ou o de alguém da família), percorra os 4 caminhos: quente (1-1-1-1), morno (1-3-1-1), frio (1-3-2-3) e SBPE (5). Confira se as etiquetas, os campos e o aviso interno chegaram.
