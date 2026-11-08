@@ -237,6 +237,9 @@
     if ($('#bResumo')) $('#bResumo').onclick = () => imprimirResumo(p);
     $('#bPasta').onclick = () => imprimirPasta(p);
     ligarMascaras($('#etapaBox'));
+    S.sujo = false;
+    const marcar = (ev) => { if (!ev.target.classList.contains('up')) S.sujo = true; };
+    $('#etapaBox').addEventListener('input', marcar); $('#etapaBox').addEventListener('change', marcar);
     document.querySelectorAll('.up').forEach((inp) => inp.onchange = () => enviarArquivo(inp));
     const salvar = async (silencioso) => {
       const dados = lerCampos($('#etapaBox .form') || document.createElement('div'));
@@ -381,7 +384,7 @@
         const editando = document.activeElement && /INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName);
         if (S.view === 'quadro' && !editando) vQuadro(true);
         if (S.view === 'lista' && !editando) vLista(true);
-        if (S.view === 'processo' && !editando && r.eventos.some((e) => e.pid === S.pid)) abrirProcesso(S.pid);
+        if (S.view === 'processo' && !editando && !S.sujo && r.eventos.some((e) => e.pid === S.pid)) abrirProcesso(S.pid);
       } catch (e) { if (e.status === 401) location.reload(); }
     }, 10000);
   }
